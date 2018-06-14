@@ -3,7 +3,7 @@ Call:
 C5.0.formula(formula = responded ~ ., data = train, trials = 100, rules = TRUE)
 
 
-C5.0 [Release 2.07 GPL Edition]  	Thu Jun 14 13:16:10 2018
+C5.0 [Release 2.07 GPL Edition]  	Thu Jun 14 13:47:34 2018
 -------------------------------
 
 Class specified by attribute `outcome'
@@ -18,69 +18,69 @@ Rule 0/1: (3203/148, lift 1.1)
 	campaign <= 0.05128205
 	emp.var.rate > -1.7
 	euribor3m > 0.09090909
-	->  class 1  [0.954]
+	->  class no  [0.954]
 
 Rule 0/2: (790/42, lift 1.1)
-	month = 3
-	day_of_week = 3
+	month = jun
+	day_of_week = thu
 	campaign <= 0.05128205
 	euribor3m > 0.09090909
-	->  class 1  [0.946]
+	->  class no  [0.946]
 
 Rule 0/3: (795/52, lift 1.1)
-	day_of_week = 4
+	day_of_week = tue
 	campaign <= 0.05128205
 	euribor3m > 0.09090909
-	->  class 1  [0.934]
+	->  class no  [0.934]
 
 Rule 0/4: (1237/94, lift 1.0)
-	day_of_week = 2
+	day_of_week = mon
 	euribor3m > 0.09090909
-	->  class 1  [0.923]
+	->  class no  [0.923]
 
 Rule 0/5: (1029/81, lift 1.0)
 	campaign > 0.05128205
-	->  class 1  [0.920]
+	->  class no  [0.920]
 
 Rule 0/6: (5725/539, lift 1.0)
-	poutcome in {1, 2}
-	->  class 1  [0.906]
+	poutcome in {failure, nonexistent}
+	->  class no  [0.906]
 
 Rule 0/7: (13/1, lift 7.7)
 	custAge <= 0.2096236
-	month = 1
+	month = apr
 	cons.conf.idx <= 0.6150628
 	euribor3m <= 0.1718431
-	->  class 2  [0.867]
+	->  class yes  [0.867]
 
 Rule 0/8: (3, lift 7.1)
-	day_of_week = 4
+	day_of_week = tue
 	campaign > 0
-	poutcome = 3
+	poutcome = success
 	euribor3m > 0.09090909
-	->  class 2  [0.800]
+	->  class yes  [0.800]
 
 Rule 0/9: (32/10, lift 6.0)
 	custAge <= 0.2096236
-	marital in {2, 3}
-	month = 2
+	marital in {married, single}
+	month = dec
 	cons.conf.idx <= 0.6150628
 	pastEmail <= 0
-	->  class 2  [0.676]
+	->  class yes  [0.676]
 
 Rule 0/10: (207/74, lift 5.7)
-	poutcome = 3
-	->  class 2  [0.641]
+	poutcome = success
+	->  class yes  [0.641]
 
 Rule 0/11: (106/51, lift 4.6)
 	custAge <= 0.2096236
-	marital in {2, 3}
-	month in {1, 2}
+	marital in {married, single}
+	month in {apr, dec}
 	cons.conf.idx <= 0.6150628
 	pastEmail <= 0
-	->  class 2  [0.519]
+	->  class yes  [0.519]
 
-Default class: 1
+Default class: no
 
 -----  Trial 1:  -----
 
@@ -90,34 +90,34 @@ Rule 1/1: (61.4/6.2, lift 1.3)
 	campaign > 0.1025641
 	nr.employed > 0.4257089
 	nr.employed <= 0.5122873
-	->  class 1  [0.886]
+	->  class no  [0.886]
 
 Rule 1/2: (1013/163.6, lift 1.2)
-	default = 2
+	default = unknown
 	nr.employed > 0.4257089
-	->  class 1  [0.838]
+	->  class no  [0.838]
 
 Rule 1/3: (4355.2/824, lift 1.2)
 	cons.conf.idx > 0.1548117
 	nr.employed > 0.4257089
-	->  class 1  [0.811]
+	->  class no  [0.811]
 
 Rule 1/4: (29.6/4.7, lift 2.8)
-	month = 2
+	month = dec
 	nr.employed > 0.5122873
-	->  class 2  [0.821]
+	->  class yes  [0.821]
 
 Rule 1/5: (1079.9/403.3, lift 2.1)
 	nr.employed <= 0.4257089
-	->  class 2  [0.626]
+	->  class yes  [0.626]
 
 Rule 1/6: (515.7/227.5, lift 1.9)
-	default = 1
+	default = no
 	campaign <= 0.1025641
 	cons.conf.idx <= 0.1548117
-	->  class 2  [0.559]
+	->  class yes  [0.559]
 
-Default class: 1
+Default class: no
 
 -----  Trial 2:  -----
 
@@ -125,34 +125,34 @@ Rules:
 
 Rule 2/1: (276.8/69.6, lift 1.1)
 	campaign > 0.1282051
-	->  class 1  [0.747]
+	->  class no  [0.747]
 
 Rule 2/2: (5864.5/1760.6, lift 1.0)
 	custAge > 0.06182496
-	->  class 1  [0.700]
+	->  class no  [0.700]
 
 Rule 2/3: (67.5/16.7, lift 2.4)
 	custAge <= 0.06182496
-	->  class 2  [0.745]
+	->  class yes  [0.745]
 
 Rule 2/4: (574.5/254, lift 1.8)
-	housing = 1
-	contact = 1
+	housing = no
+	contact = cellular
 	campaign <= 0.1282051
 	cons.price.idx > 0
 	euribor3m <= 0.1507595
 	pastEmail <= 0.1666667
-	->  class 2  [0.558]
+	->  class yes  [0.558]
 
 Rule 2/5: (649.4/303.7, lift 1.7)
-	housing = 1
-	contact = 1
+	housing = no
+	contact = cellular
 	campaign <= 0.1282051
 	euribor3m <= 0.1507595
 	pastEmail <= 0.1666667
-	->  class 2  [0.532]
+	->  class yes  [0.532]
 
-Default class: 1
+Default class: no
 
 -----  Trial 3:  -----
 
@@ -160,40 +160,40 @@ Rules:
 
 Rule 3/1: (2910.9/830.9, lift 1.1)
 	nr.employed > 0.5122873
-	->  class 1  [0.714]
+	->  class no  [0.714]
 
 Rule 3/2: (5219.4/1764.3, lift 1.0)
 	euribor3m > 0.02244389
 	pmonths > 0.0007340674
-	->  class 1  [0.662]
+	->  class no  [0.662]
 
 Rule 3/3: (308.1/124.2, lift 1.6)
 	euribor3m <= 0.02244389
 	pmonths > 0.0007340674
-	->  class 2  [0.596]
+	->  class yes  [0.596]
 
 Rule 3/4: (589.4/241.7, lift 1.6)
-	schooling in {1, 3}
-	default = 1
-	housing = 3
-	contact = 1
-	poutcome = 2
+	schooling in {high.school, unknown}
+	default = no
+	housing = yes
+	contact = cellular
+	poutcome = nonexistent
 	nr.employed <= 0.5122873
-	->  class 2  [0.590]
+	->  class yes  [0.590]
 
 Rule 3/5: (816.6/362.1, lift 1.5)
-	default = 1
-	housing = 3
-	contact = 1
-	poutcome = 2
+	default = no
+	housing = yes
+	contact = cellular
+	poutcome = nonexistent
 	nr.employed <= 0.5122873
-	->  class 2  [0.556]
+	->  class yes  [0.556]
 
 Rule 3/6: (404.5/182.4, lift 1.5)
 	pmonths <= 0.0007340674
-	->  class 2  [0.549]
+	->  class yes  [0.549]
 
-Default class: 1
+Default class: no
 
 -----  Trial 4:  -----
 
@@ -201,170 +201,170 @@ Rules:
 
 Rule 4/1: (5748.7/2215, lift 1.0)
 	cons.conf.idx > 0.05439331
-	->  class 1  [0.615]
+	->  class no  [0.615]
 
 Rule 4/2: (38.9/7.2, lift 2.0)
-	month = 2
+	month = dec
 	cons.conf.idx > 0.05439331
 	nr.employed > 0.4257089
-	->  class 2  [0.800]
+	->  class yes  [0.800]
 
 Rule 4/3: (39.9/9.6, lift 1.9)
-	schooling in {1, 2}
-	loan = 1
+	schooling in {high.school, university.degree}
+	loan = no
 	euribor3m > 0.1432782
 	nr.employed <= 0.4257089
-	->  class 2  [0.746]
+	->  class yes  [0.746]
 
 Rule 4/4: (39.7/10.9, lift 1.8)
-	schooling in {1, 2}
-	month = 1
+	schooling in {high.school, university.degree}
+	month = apr
 	nr.employed <= 0.4257089
-	->  class 2  [0.715]
+	->  class yes  [0.715]
 
 Rule 4/5: (73.2/22.2, lift 1.8)
-	schooling in {1, 2}
-	loan = 1
+	schooling in {high.school, university.degree}
+	loan = no
 	pdays > 3
 	cons.price.idx > 0.7786438
 	cons.conf.idx > 0.05439331
 	nr.employed <= 0.4257089
-	->  class 2  [0.691]
+	->  class yes  [0.691]
 
 Rule 4/6: (63.6/19.6, lift 1.8)
 	custAge <= 0.06774931
-	contact = 1
-	day_of_week in {1, 2, 3, 5}
-	->  class 2  [0.685]
+	contact = cellular
+	day_of_week in {fri, mon, thu, wed}
+	->  class yes  [0.685]
 
 Rule 4/7: (79.6/28.3, lift 1.6)
-	schooling = 3
-	loan = 1
+	schooling = unknown
+	loan = no
 	cons.conf.idx > 0.05439331
 	nr.employed <= 0.4257089
-	->  class 2  [0.641]
+	->  class yes  [0.641]
 
 Rule 4/8: (107.7/38.5, lift 1.6)
-	contact = 1
+	contact = cellular
 	euribor3m > 0.9818635
 	euribor3m <= 0.9820902
-	->  class 2  [0.640]
+	->  class yes  [0.640]
 
 Rule 4/9: (183.3/84.6, lift 1.4)
 	cons.conf.idx <= 0.05439331
-	->  class 2  [0.538]
+	->  class yes  [0.538]
 
-Default class: 1
+Default class: no
 
 -----  Trial 5:  -----
 
 Rules:
 
 Rule 5/1: (53.9/5.9, lift 1.5)
-	profession = 3
+	profession = retired
 	nr.employed > 0.5122873
-	->  class 1  [0.877]
+	->  class no  [0.877]
 
 Rule 5/2: (665.8/199, lift 1.2)
 	nr.employed > 0.5122873
 	nr.employed <= 0.8597354
-	->  class 1  [0.701]
+	->  class no  [0.701]
 
 Rule 5/3: (192.3/57.8, lift 1.2)
-	profession in {1, 2, 4}
-	marital = 1
-	month = 3
+	profession in {admin., blue-collar, student}
+	marital = divorced
+	month = jun
 	nr.employed > 0.8597354
-	->  class 1  [0.697]
+	->  class no  [0.697]
 
 Rule 5/4: (169.1/58.4, lift 1.2)
 	campaign > 0.07692308
 	nr.employed <= 0.5122873
-	->  class 1  [0.653]
+	->  class no  [0.653]
 
 Rule 5/5: (1279.2/445.4, lift 1.2)
-	housing in {1, 2}
-	month = 3
+	housing in {no, unknown}
+	month = jun
 	nr.employed > 0.5122873
-	->  class 1  [0.652]
+	->  class no  [0.652]
 
 Rule 5/6: (2459.9/898.1, lift 1.1)
-	month = 3
+	month = jun
 	campaign <= 0.1282051
 	nr.employed > 0.5122873
-	->  class 1  [0.635]
+	->  class no  [0.635]
 
 Rule 5/7: (5401/2366.3, lift 1.0)
 	campaign <= 0.07692308
-	->  class 1  [0.562]
+	->  class no  [0.562]
 
 Rule 5/8: (38.8/10.6, lift 1.6)
-	month = 2
+	month = dec
 	nr.employed > 0.5122873
-	->  class 2  [0.716]
+	->  class yes  [0.716]
 
 Rule 5/9: (82.8/24.7, lift 1.6)
 	custAge <= 0.4790686
-	profession = 2
-	marital = 1
-	schooling in {1, 2}
-	contact = 1
+	profession = blue-collar
+	marital = divorced
+	schooling in {high.school, university.degree}
+	contact = cellular
 	campaign <= 0.07692308
 	euribor3m <= 0.167309
 	pmonths > 0.0007340674
-	->  class 2  [0.698]
+	->  class yes  [0.698]
 
 Rule 5/10: (98.2/33.4, lift 1.5)
-	profession in {1, 2, 4}
-	marital in {2, 3}
-	housing = 3
+	profession in {admin., blue-collar, student}
+	marital in {married, single}
+	housing = yes
 	campaign > 0.1282051
 	nr.employed > 0.8597354
-	->  class 2  [0.657]
+	->  class yes  [0.657]
 
 Rule 5/11: (355.3/132.5, lift 1.4)
-	profession in {1, 4}
-	schooling = 2
-	contact = 1
+	profession in {admin., student}
+	schooling = university.degree
+	contact = cellular
 	campaign <= 0.07692308
 	previous <= 0
 	nr.employed <= 0.5122873
-	->  class 2  [0.626]
+	->  class yes  [0.626]
 
 Rule 5/12: (253.7/98.8, lift 1.4)
-	profession = 3
+	profession = retired
 	campaign <= 0.07692308
 	nr.employed <= 0.5122873
-	->  class 2  [0.610]
+	->  class yes  [0.610]
 
 Rule 5/13: (298.3/119.2, lift 1.4)
-	profession in {1, 4}
-	marital = 3
-	schooling = 1
-	contact = 1
+	profession in {admin., student}
+	marital = single
+	schooling = high.school
+	contact = cellular
 	nr.employed <= 0.5122873
 	pastEmail <= 0.1666667
-	->  class 2  [0.600]
+	->  class yes  [0.600]
 
 Rule 5/14: (77/32.2, lift 1.3)
-	profession in {1, 4}
-	schooling = 3
+	profession in {admin., student}
+	schooling = unknown
 	nr.employed <= 0.5122873
 	pastEmail <= 0.1666667
-	->  class 2  [0.579]
+	->  class yes  [0.579]
 
 Rule 5/15: (411.4/177.3, lift 1.3)
 	custAge <= 0.4790686
-	profession = 2
-	schooling in {1, 2}
-	default = 1
-	contact = 1
+	profession = blue-collar
+	schooling in {high.school, university.degree}
+	default = no
+	contact = cellular
 	campaign <= 0
 	euribor3m <= 0.167309
 	pmonths > 0.0007340674
-	->  class 2  [0.569]
+	->  class yes  [0.569]
 
-Default class: 1
+Default class: no
 
 -----  Trial 6:  -----
 
@@ -372,97 +372,97 @@ Rules:
 
 Rule 6/1: (25.9, lift 1.7)
 	campaign > 0.3333333
-	->  class 1  [0.964]
+	->  class no  [0.964]
 
 Rule 6/2: (13.4, lift 1.7)
-	profession = 2
-	schooling = 3
-	month = 3
-	day_of_week = 1
-	->  class 1  [0.935]
+	profession = blue-collar
+	schooling = unknown
+	month = jun
+	day_of_week = fri
+	->  class no  [0.935]
 
 Rule 6/3: (44/6.3, lift 1.5)
-	day_of_week in {1, 2}
+	day_of_week in {fri, mon}
 	pdays > 15
 	nr.employed <= 0
-	->  class 1  [0.840]
+	->  class no  [0.840]
 
 Rule 6/4: (5906.1/2629.5, lift 1.0)
 	campaign <= 0.3333333
-	->  class 1  [0.555]
+	->  class no  [0.555]
 
 Rule 6/5: (52.3/11.5, lift 1.7)
-	month = 3
-	day_of_week in {2, 3}
+	month = jun
+	day_of_week in {mon, thu}
 	campaign > 0
 	nr.employed <= 0.1705104
 	pastEmail <= 0.1666667
-	->  class 2  [0.769]
+	->  class yes  [0.769]
 
 Rule 6/6: (28.9/8.1, lift 1.6)
-	schooling = 3
-	month in {1, 2}
-	day_of_week in {1, 2}
+	schooling = unknown
+	month in {apr, dec}
+	day_of_week in {fri, mon}
 	nr.employed > 0
-	->  class 2  [0.707]
+	->  class yes  [0.707]
 
 Rule 6/7: (34.4/10.5, lift 1.5)
-	profession = 4
-	month = 3
-	day_of_week = 1
-	->  class 2  [0.685]
+	profession = student
+	month = jun
+	day_of_week = fri
+	->  class yes  [0.685]
 
 Rule 6/8: (384.6/136, lift 1.5)
 	pdays <= 15
 	emp.var.rate > -3.4
-	->  class 2  [0.646]
+	->  class yes  [0.646]
 
 Rule 6/9: (133.5/50.8, lift 1.4)
-	loan = 2
-	contact = 1
-	month = 3
-	day_of_week in {2, 3}
+	loan = yes
+	contact = cellular
+	month = jun
+	day_of_week in {mon, thu}
 	campaign <= 0
 	pastEmail <= 0.1666667
-	->  class 2  [0.617]
+	->  class yes  [0.617]
 
 Rule 6/10: (525/200.7, lift 1.4)
-	month in {1, 2}
-	day_of_week in {3, 4, 5}
+	month in {apr, dec}
+	day_of_week in {thu, tue, wed}
 	campaign <= 0.3333333
 	pdays > 15
 	pastEmail <= 0
-	->  class 2  [0.617]
+	->  class yes  [0.617]
 
 Rule 6/11: (320.9/128.4, lift 1.4)
-	loan = 1
-	day_of_week in {2, 3}
+	loan = no
+	day_of_week in {mon, thu}
 	campaign > 0
 	campaign <= 0.1538462
 	emp.var.rate > 1.1
 	euribor3m <= 0.9814101
-	->  class 2  [0.599]
+	->  class yes  [0.599]
 
 Rule 6/12: (100.7/40.9, lift 1.3)
-	month = 3
-	day_of_week = 1
+	month = jun
+	day_of_week = fri
 	pdays > 15
-	poutcome = 1
-	->  class 2  [0.592]
+	poutcome = failure
+	->  class yes  [0.592]
 
 Rule 6/13: (495.7/215.7, lift 1.3)
 	custAge <= 0.4563948
-	profession = 2
-	schooling in {1, 2}
-	housing in {1, 3}
-	loan = 1
-	month = 3
-	day_of_week = 1
+	profession = blue-collar
+	schooling in {high.school, university.degree}
+	housing in {no, yes}
+	loan = no
+	month = jun
+	day_of_week = fri
 	campaign <= 0.3333333
 	pdays > 15
-	->  class 2  [0.565]
+	->  class yes  [0.565]
 
-Default class: 1
+Default class: no
 
 -----  Trial 7:  -----
 
@@ -470,636 +470,636 @@ Rules:
 
 Rule 7/1: (5452.1/2322.8, lift 1.0)
 	pmonths > 0.0007340674
-	->  class 1  [0.574]
+	->  class no  [0.574]
 
 Rule 7/2: (33.6/9.6, lift 1.6)
-	month = 2
+	month = dec
 	emp.var.rate > -0.2
-	->  class 2  [0.701]
+	->  class yes  [0.701]
 
 Rule 7/3: (197/73.6, lift 1.4)
 	custAge <= 0.1976935
-	contact = 1
-	month in {1, 2}
+	contact = cellular
+	month in {apr, dec}
 	euribor3m > 0.05100884
 	pmonths > 0.0007340674
-	->  class 2  [0.625]
+	->  class yes  [0.625]
 
 Rule 7/4: (369.6/140, lift 1.4)
 	custAge > 0.2395321
 	euribor3m <= 0.05100884
 	pmonths > 0.0007340674
-	->  class 2  [0.621]
+	->  class yes  [0.621]
 
 Rule 7/5: (479.9/211.9, lift 1.3)
 	pmonths <= 0.0007340674
-	->  class 2  [0.558]
+	->  class yes  [0.558]
 
-Default class: 1
+Default class: no
 
 -----  Trial 8:  -----
 
 Rules:
 
 Rule 8/1: (1496.4/617.2, lift 1.1)
-	contact = 2
-	->  class 1  [0.587]
+	contact = telephone
+	->  class no  [0.587]
 
 Rule 8/2: (4435.6/2108.4, lift 1.0)
-	contact = 1
-	->  class 1  [0.525]
+	contact = cellular
+	->  class no  [0.525]
 
 Rule 8/3: (56.2/9.8, lift 1.8)
 	custAge <= 0.6470652
-	profession = 3
-	contact = 1
-	poutcome in {2, 3}
+	profession = retired
+	contact = cellular
+	poutcome in {nonexistent, success}
 	nr.employed <= 0.4257089
-	->  class 2  [0.815]
+	->  class yes  [0.815]
 
 Rule 8/4: (71.2/19.8, lift 1.6)
 	custAge > 0.4196251
 	custAge <= 0.513422
-	profession in {1, 2}
-	schooling = 1
-	housing in {1, 3}
-	contact = 1
-	day_of_week = 1
+	profession in {admin., blue-collar}
+	schooling = high.school
+	housing in {no, yes}
+	contact = cellular
+	day_of_week = fri
 	euribor3m <= 0.9820902
 	nr.employed > 0.4257089
-	->  class 2  [0.716]
+	->  class yes  [0.716]
 
 Rule 8/5: (28.7/7.9, lift 1.5)
-	profession in {1, 2, 4}
-	schooling = 1
-	contact = 1
-	month = 2
+	profession in {admin., blue-collar, student}
+	schooling = high.school
+	contact = cellular
+	month = dec
 	nr.employed > 0.4257089
-	->  class 2  [0.711]
+	->  class yes  [0.711]
 
 Rule 8/6: (195.5/70.4, lift 1.4)
-	schooling = 2
-	contact = 1
+	schooling = university.degree
+	contact = cellular
 	campaign > 0.02564103
 	campaign <= 0.07692308
 	nr.employed > 0.4257089
 	pmonths > 0.0007340674
-	->  class 2  [0.638]
+	->  class yes  [0.638]
 
 Rule 8/7: (659.6/248.3, lift 1.4)
 	custAge <= 0.6470652
-	contact = 1
-	poutcome in {2, 3}
+	contact = cellular
+	poutcome in {nonexistent, success}
 	emp.var.rate > -3
 	nr.employed <= 0.4257089
 	pastEmail <= 0.2777778
-	->  class 2  [0.623]
+	->  class yes  [0.623]
 
 Rule 8/8: (586.5/254.9, lift 1.2)
-	schooling = 2
-	default = 1
-	contact = 1
-	day_of_week in {1, 2, 4, 5}
+	schooling = university.degree
+	default = no
+	contact = cellular
+	day_of_week in {fri, mon, tue, wed}
 	campaign <= 0.07692308
 	nr.employed > 0.4257089
 	pmonths > 0.0007340674
-	->  class 2  [0.565]
+	->  class yes  [0.565]
 
-Default class: 1
+Default class: no
 
 -----  Trial 9:  -----
 
 Rules:
 
 Rule 9/1: (275.5/95.1, lift 1.2)
-	month in {1, 2}
-	day_of_week in {1, 2}
+	month in {apr, dec}
+	day_of_week in {fri, mon}
 	campaign > 0
-	->  class 1  [0.654]
+	->  class no  [0.654]
 
 Rule 9/2: (4598.4/2072.1, lift 1.0)
-	month = 3
-	->  class 1  [0.549]
+	month = jun
+	->  class no  [0.549]
 
 Rule 9/3: (90.2/20.2, lift 1.7)
 	custAge > 0.2898181
 	custAge <= 0.4909556
-	profession = 2
-	housing in {1, 3}
-	month = 3
-	poutcome = 2
+	profession = blue-collar
+	housing in {no, yes}
+	month = jun
+	poutcome = nonexistent
 	euribor3m > 0.1478123
 	euribor3m <= 0.2668329
-	->  class 2  [0.770]
+	->  class yes  [0.770]
 
 Rule 9/4: (168.9/66.2, lift 1.3)
-	housing = 1
-	month = 3
+	housing = no
+	month = jun
 	campaign > 0.02564103
 	euribor3m <= 0.1478123
 	pastEmail <= 0.1666667
-	->  class 2  [0.607]
+	->  class yes  [0.607]
 
 Rule 9/5: (481.4/199.2, lift 1.3)
 	custAge > 0.2898181
 	custAge <= 0.4909556
-	profession = 2
-	schooling = 1
-	housing in {1, 3}
-	month = 3
-	day_of_week in {1, 3, 4}
-	poutcome = 2
+	profession = blue-collar
+	schooling = high.school
+	housing in {no, yes}
+	month = jun
+	day_of_week in {fri, thu, tue}
+	poutcome = nonexistent
 	euribor3m > 0.1478123
-	->  class 2  [0.586]
+	->  class yes  [0.586]
 
 Rule 9/6: (306.8/130.3, lift 1.2)
-	housing = 3
-	month = 3
-	poutcome in {1, 3}
+	housing = yes
+	month = jun
+	poutcome in {failure, success}
 	euribor3m <= 0.1478123
-	->  class 2  [0.575]
+	->  class yes  [0.575]
 
 Rule 9/7: (776.7/332.9, lift 1.2)
-	month in {1, 2}
-	day_of_week in {3, 4, 5}
-	->  class 2  [0.571]
+	month in {apr, dec}
+	day_of_week in {thu, tue, wed}
+	->  class yes  [0.571]
 
 Rule 9/8: (753.8/328.1, lift 1.2)
-	month in {1, 2}
+	month in {apr, dec}
 	campaign <= 0
-	->  class 2  [0.565]
+	->  class yes  [0.565]
 
-Default class: 1
+Default class: no
 
 -----  Trial 10:  -----
 
 Rules:
 
 Rule 10/1: (16.7, lift 1.8)
-	profession = 3
+	profession = retired
 	cons.conf.idx > 0.460251
 	nr.employed > 0.4257089
-	->  class 1  [0.947]
+	->  class no  [0.947]
 
 Rule 10/2: (32.3/5.8, lift 1.5)
-	housing = 1
-	loan = 1
+	housing = no
+	loan = no
 	pdays <= 3
 	cons.price.idx <= 0.7116134
 	nr.employed <= 0.4257089
-	->  class 1  [0.802]
+	->  class no  [0.802]
 
 Rule 10/3: (39.7/9.7, lift 1.4)
 	custAge > 0.6842105
-	housing = 1
-	loan = 1
+	housing = no
+	loan = no
 	cons.price.idx <= 0.7116134
 	nr.employed <= 0.4257089
-	->  class 1  [0.743]
+	->  class no  [0.743]
 
 Rule 10/4: (82/23.2, lift 1.3)
-	housing = 1
-	loan = 1
+	housing = no
+	loan = no
 	cons.price.idx > 0.7116134
 	cons.conf.idx > 0.2050209
 	nr.employed <= 0.4257089
-	->  class 1  [0.712]
+	->  class no  [0.712]
 
 Rule 10/5: (339.4/116.3, lift 1.2)
 	custAge <= 0.3361596
-	housing = 3
+	housing = yes
 	cons.conf.idx > 0.460251
 	nr.employed > 0.4257089
-	->  class 1  [0.657]
+	->  class no  [0.657]
 
 Rule 10/6: (501.8/175.6, lift 1.2)
-	profession in {1, 2}
-	housing in {1, 2}
+	profession in {admin., blue-collar}
+	housing in {no, unknown}
 	cons.conf.idx > 0.460251
 	nr.employed > 0.4257089
-	->  class 1  [0.650]
+	->  class no  [0.650]
 
 Rule 10/7: (599.4/225.4, lift 1.2)
 	custAge > 0.3381148
-	marital in {2, 3}
-	schooling in {1, 2}
+	marital in {married, single}
+	schooling in {high.school, university.degree}
 	cons.conf.idx <= 0.460251
 	nr.employed > 0.4257089
-	->  class 1  [0.624]
+	->  class no  [0.624]
 
 Rule 10/8: (349.6/136, lift 1.1)
-	marital = 1
+	marital = divorced
 	cons.conf.idx <= 0.460251
 	nr.employed > 0.4257089
-	->  class 1  [0.610]
+	->  class no  [0.610]
 
 Rule 10/9: (570.8/229.4, lift 1.1)
-	poutcome = 1
+	poutcome = failure
 	cons.conf.idx <= 0.460251
-	->  class 1  [0.598]
+	->  class no  [0.598]
 
 Rule 10/10: (214.9/87.5, lift 1.1)
-	loan = 2
+	loan = yes
 	nr.employed <= 0.4257089
-	->  class 1  [0.592]
+	->  class no  [0.592]
 
 Rule 10/11: (1226.3/503.7, lift 1.1)
-	schooling = 1
-	day_of_week in {1, 4}
+	schooling = high.school
+	day_of_week in {fri, tue}
 	nr.employed > 0.4257089
-	->  class 1  [0.589]
+	->  class no  [0.589]
 
 Rule 10/12: (875.8/365.2, lift 1.1)
 	custAge <= 0.3381148
-	schooling = 2
+	schooling = university.degree
 	nr.employed > 0.4257089
-	->  class 1  [0.583]
+	->  class no  [0.583]
 
 Rule 10/13: (3419.8/1547.4, lift 1.0)
-	profession in {2, 4}
-	->  class 1  [0.547]
+	profession in {blue-collar, student}
+	->  class no  [0.547]
 
 Rule 10/14: (18/4, lift 1.6)
-	profession = 4
+	profession = student
 	cons.conf.idx > 0.460251
 	nr.employed > 0.4257089
-	->  class 2  [0.750]
+	->  class yes  [0.750]
 
 Rule 10/15: (48.7/16.4, lift 1.4)
 	custAge <= 0.3381148
-	marital in {2, 3}
-	schooling = 1
-	poutcome = 3
+	marital in {married, single}
+	schooling = high.school
+	poutcome = success
 	nr.employed > 0.4257089
-	->  class 2  [0.657]
+	->  class yes  [0.657]
 
 Rule 10/16: (125.3/51.3, lift 1.3)
-	marital in {2, 3}
-	schooling = 3
+	marital in {married, single}
+	schooling = unknown
 	cons.conf.idx <= 0.460251
-	->  class 2  [0.589]
+	->  class yes  [0.589]
 
 Rule 10/17: (642.4/274.5, lift 1.2)
-	housing in {2, 3}
-	loan = 1
+	housing in {unknown, yes}
+	loan = no
 	cons.conf.idx > 0.2050209
 	nr.employed <= 0.4257089
-	->  class 2  [0.573]
+	->  class yes  [0.573]
 
 Rule 10/18: (284/122.5, lift 1.2)
 	custAge > 0.3361596
-	profession in {1, 2}
-	housing = 3
+	profession in {admin., blue-collar}
+	housing = yes
 	cons.conf.idx > 0.460251
 	nr.employed > 0.4257089
-	->  class 2  [0.568]
+	->  class yes  [0.568]
 
 Rule 10/19: (878.4/389.2, lift 1.2)
 	custAge <= 0.3381148
-	marital in {2, 3}
-	schooling = 1
-	housing in {1, 3}
-	day_of_week in {2, 3, 5}
-	poutcome = 2
+	marital in {married, single}
+	schooling = high.school
+	housing in {no, yes}
+	day_of_week in {mon, thu, wed}
+	poutcome = nonexistent
 	cons.conf.idx <= 0.460251
 	nr.employed > 0.4257089
-	->  class 2  [0.557]
+	->  class yes  [0.557]
 
 Rule 10/20: (1549.8/766.3, lift 1.1)
 	nr.employed <= 0.4257089
-	->  class 2  [0.506]
+	->  class yes  [0.506]
 
-Default class: 1
+Default class: no
 
 -----  Trial 11:  -----
 
 Rules:
 
 Rule 11/1: (106.2/32, lift 1.3)
-	day_of_week = 1
+	day_of_week = fri
 	campaign <= 0.1538462
 	cons.conf.idx > 0.6025105
 	nr.employed > 0.5122873
-	->  class 1  [0.695]
+	->  class no  [0.695]
 
 Rule 11/2: (1961/795.2, lift 1.1)
-	month = 3
-	day_of_week in {2, 3, 4, 5}
+	month = jun
+	day_of_week in {mon, thu, tue, wed}
 	nr.employed > 0.5122873
-	->  class 1  [0.594]
+	->  class no  [0.594]
 
 Rule 11/3: (1922.2/787.1, lift 1.1)
-	marital in {1, 2}
-	month = 3
+	marital in {divorced, married}
+	month = jun
 	nr.employed > 0.5122873
-	->  class 1  [0.590]
+	->  class no  [0.590]
 
 Rule 11/4: (3262.7/1565.3, lift 1.0)
 	nr.employed <= 0.5122873
-	->  class 1  [0.520]
+	->  class no  [0.520]
 
 Rule 11/5: (31.9/5.4, lift 1.8)
 	campaign <= 0.1025641
 	euribor3m > 0.2008615
 	euribor3m <= 0.2221718
-	->  class 2  [0.810]
+	->  class yes  [0.810]
 
 Rule 11/6: (39.4/9.5, lift 1.6)
-	profession in {1, 2}
-	day_of_week = 1
+	profession in {admin., blue-collar}
+	day_of_week = fri
 	campaign > 0.1538462
 	campaign <= 0.2820513
 	nr.employed > 0.5122873
-	->  class 2  [0.747]
+	->  class yes  [0.747]
 
 Rule 11/7: (34.1/11.2, lift 1.5)
-	profession in {1, 2, 4}
-	month = 2
+	profession in {admin., blue-collar, student}
+	month = dec
 	nr.employed > 0.5122873
-	->  class 2  [0.661]
+	->  class yes  [0.661]
 
 Rule 11/8: (145.3/53.6, lift 1.4)
-	profession = 2
+	profession = blue-collar
 	campaign <= 0.1025641
 	euribor3m <= 0.01995013
-	->  class 2  [0.629]
+	->  class yes  [0.629]
 
 Rule 11/9: (149.6/56.2, lift 1.4)
-	profession in {1, 2, 4}
-	marital = 3
-	day_of_week = 1
+	profession in {admin., blue-collar, student}
+	marital = single
+	day_of_week = fri
 	campaign <= 0.2820513
 	cons.conf.idx <= 0.6025105
 	nr.employed > 0.5122873
-	->  class 2  [0.622]
+	->  class yes  [0.622]
 
 Rule 11/10: (255.9/117.3, lift 1.2)
-	profession = 3
+	profession = retired
 	campaign <= 0.1025641
 	euribor3m <= 0.2221718
-	->  class 2  [0.541]
+	->  class yes  [0.541]
 
-Default class: 1
+Default class: no
 
 -----  Trial 12:  -----
 
 Rules:
 
 Rule 12/1: (22.8/3.4, lift 1.6)
-	poutcome = 3
+	poutcome = success
 	cons.conf.idx <= 0.0334728
-	->  class 1  [0.825]
+	->  class no  [0.825]
 
 Rule 12/2: (5495.1/2573.7, lift 1.0)
-	poutcome in {1, 2}
-	->  class 1  [0.532]
+	poutcome in {failure, nonexistent}
+	->  class no  [0.532]
 
 Rule 12/3: (66.1/14.5, lift 1.6)
 	custAge > 0.4473684
 	custAge <= 0.4935688
-	profession = 2
-	contact = 1
+	profession = blue-collar
+	contact = cellular
 	nr.employed <= 0.5122873
-	->  class 2  [0.772]
+	->  class yes  [0.772]
 
 Rule 12/4: (244.9/85.6, lift 1.4)
-	profession = 1
-	contact = 1
-	poutcome in {1, 2}
+	profession = admin.
+	contact = cellular
+	poutcome in {failure, nonexistent}
 	cons.conf.idx > 0.2050209
 	cons.conf.idx <= 0.6778243
 	nr.employed <= 0.5122873
-	->  class 2  [0.649]
+	->  class yes  [0.649]
 
 Rule 12/5: (316.2/132.6, lift 1.2)
-	profession = 1
-	schooling = 1
-	contact = 1
-	poutcome in {1, 2}
+	profession = admin.
+	schooling = high.school
+	contact = cellular
+	poutcome in {failure, nonexistent}
 	cons.conf.idx <= 0.2050209
-	->  class 2  [0.580]
+	->  class yes  [0.580]
 
 Rule 12/6: (414.1/177.2, lift 1.2)
-	poutcome = 3
+	poutcome = success
 	cons.conf.idx > 0.0334728
-	->  class 2  [0.572]
+	->  class yes  [0.572]
 
 Rule 12/7: (176.8/80.4, lift 1.1)
-	profession = 4
-	contact = 1
-	->  class 2  [0.545]
+	profession = student
+	contact = cellular
+	->  class yes  [0.545]
 
-Default class: 1
+Default class: no
 
 -----  Trial 13:  -----
 
 Rules:
 
 Rule 13/1: (422.5/177, lift 1.1)
-	month = 1
-	day_of_week in {1, 2, 3, 4}
+	month = apr
+	day_of_week in {fri, mon, thu, tue}
 	euribor3m > 0.1718431
-	->  class 1  [0.581]
+	->  class no  [0.581]
 
 Rule 13/2: (3610.1/1670.3, lift 1.0)
-	month = 3
+	month = jun
 	nr.employed > 0.4257089
-	->  class 1  [0.537]
+	->  class no  [0.537]
 
 Rule 13/3: (103.5/31.3, lift 1.4)
-	month = 1
-	day_of_week = 5
-	->  class 2  [0.694]
+	month = apr
+	day_of_week = wed
+	->  class yes  [0.694]
 
 Rule 13/4: (167.6/53.9, lift 1.4)
-	month = 1
+	month = apr
 	euribor3m <= 0.1718431
-	->  class 2  [0.677]
+	->  class yes  [0.677]
 
 Rule 13/5: (278.2/119.7, lift 1.2)
-	profession in {1, 2, 4}
+	profession in {admin., blue-collar, student}
 	euribor3m <= 0.1428248
 	nr.employed > 0.4257089
-	->  class 2  [0.569]
+	->  class yes  [0.569]
 
 Rule 13/6: (979.4/469.5, lift 1.1)
-	month = 3
+	month = jun
 	nr.employed <= 0.4257089
-	->  class 2  [0.521]
+	->  class yes  [0.521]
 
 Rule 13/7: (660.8/318.2, lift 1.1)
-	month = 2
-	->  class 2  [0.518]
+	month = dec
+	->  class yes  [0.518]
 
-Default class: 1
+Default class: no
 
 -----  Trial 14:  -----
 
 Rules:
 
 Rule 14/1: (813.9/360.5, lift 1.1)
-	poutcome = 1
-	->  class 1  [0.557]
+	poutcome = failure
+	->  class no  [0.557]
 
 Rule 14/2: (748.6/335.6, lift 1.1)
-	schooling = 2
+	schooling = university.degree
 	cons.conf.idx > 0.4393305
-	->  class 1  [0.552]
+	->  class no  [0.552]
 
 Rule 14/3: (3800.8/1791.6, lift 1.0)
-	schooling = 1
+	schooling = high.school
 	euribor3m > 0.01428248
-	->  class 1  [0.529]
+	->  class no  [0.529]
 
 Rule 14/4: (81.6/22.8, lift 1.5)
-	poutcome = 2
+	poutcome = nonexistent
 	euribor3m <= 0.01428248
-	->  class 2  [0.715]
+	->  class yes  [0.715]
 
 Rule 14/5: (201.5/74.6, lift 1.3)
 	custAge <= 0.2424238
-	schooling = 1
-	housing in {1, 3}
+	schooling = high.school
+	housing in {no, yes}
 	euribor3m > 0.9811834
-	->  class 2  [0.628]
+	->  class yes  [0.628]
 
 Rule 14/6: (209.2/78.9, lift 1.3)
 	custAge <= 0.2424238
-	schooling = 1
-	month in {1, 2}
-	poutcome = 2
+	schooling = high.school
+	month in {apr, dec}
+	poutcome = nonexistent
 	euribor3m > 0.01428248
-	->  class 2  [0.622]
+	->  class yes  [0.622]
 
 Rule 14/7: (336.6/130.8, lift 1.3)
 	custAge <= 0.2424238
-	schooling = 1
-	housing in {1, 3}
-	day_of_week = 3
-	poutcome = 2
-	->  class 2  [0.611]
+	schooling = high.school
+	housing in {no, yes}
+	day_of_week = thu
+	poutcome = nonexistent
+	->  class yes  [0.611]
 
 Rule 14/8: (819.5/364.4, lift 1.1)
-	schooling = 2
-	poutcome = 2
+	schooling = university.degree
+	poutcome = nonexistent
 	cons.conf.idx <= 0.4393305
-	->  class 2  [0.555]
+	->  class yes  [0.555]
 
-Default class: 1
+Default class: no
 
 -----  Trial 15:  -----
 
 Rules:
 
 Rule 15/1: (43.1/9.3, lift 1.5)
-	contact = 1
-	day_of_week = 2
+	contact = cellular
+	day_of_week = mon
 	pastEmail > 0.2222222
-	->  class 1  [0.772]
+	->  class no  [0.772]
 
 Rule 15/2: (48.2/13.4, lift 1.4)
-	contact = 1
-	day_of_week = 4
+	contact = cellular
+	day_of_week = tue
 	pdays <= 3
-	->  class 1  [0.712]
+	->  class no  [0.712]
 
 Rule 15/3: (877.1/391.6, lift 1.1)
-	schooling = 1
-	day_of_week = 2
-	->  class 1  [0.553]
+	schooling = high.school
+	day_of_week = mon
+	->  class no  [0.553]
 
 Rule 15/4: (1365.9/626.4, lift 1.0)
-	schooling in {1, 2}
-	contact = 2
-	->  class 1  [0.541]
+	schooling in {high.school, university.degree}
+	contact = telephone
+	->  class no  [0.541]
 
 Rule 15/5: (5439.9/2604.4, lift 1.0)
 	pdays > 15
-	->  class 1  [0.521]
+	->  class no  [0.521]
 
 Rule 15/6: (20.8/2.6, lift 1.7)
-	profession in {1, 2, 3}
-	schooling = 3
-	contact = 1
-	day_of_week = 4
-	->  class 2  [0.840]
+	profession in {admin., blue-collar, retired}
+	schooling = unknown
+	contact = cellular
+	day_of_week = tue
+	->  class yes  [0.840]
 
 Rule 15/7: (91.1/24.9, lift 1.5)
-	schooling in {1, 2}
-	loan = 1
-	day_of_week = 4
+	schooling in {high.school, university.degree}
+	loan = no
+	day_of_week = tue
 	euribor3m > 0.9818635
-	->  class 2  [0.722]
+	->  class yes  [0.722]
 
 Rule 15/8: (84.5/27.5, lift 1.4)
-	day_of_week = 1
+	day_of_week = fri
 	previous > 0.1666667
-	->  class 2  [0.671]
+	->  class yes  [0.671]
 
 Rule 15/9: (72.9/26.6, lift 1.3)
-	schooling = 3
-	contact = 2
+	schooling = unknown
+	contact = telephone
 	nr.employed > 0.1058601
-	->  class 2  [0.632]
+	->  class yes  [0.632]
 
 Rule 15/10: (347.2/140.4, lift 1.2)
 	custAge <= 0.2098515
-	contact = 1
-	day_of_week = 3
+	contact = cellular
+	day_of_week = thu
 	euribor3m <= 0.9823169
-	->  class 2  [0.595]
+	->  class yes  [0.595]
 
 Rule 15/11: (367.8/160.4, lift 1.2)
-	schooling in {2, 3}
-	contact = 1
-	day_of_week = 2
+	schooling in {university.degree, unknown}
+	contact = cellular
+	day_of_week = mon
 	cons.conf.idx > 0.0334728
 	pastEmail <= 0.2222222
-	->  class 2  [0.564]
+	->  class yes  [0.564]
 
 Rule 15/12: (449.1/195.6, lift 1.2)
-	contact = 1
-	day_of_week = 5
+	contact = cellular
+	day_of_week = wed
 	cons.price.idx > 0.2969602
-	->  class 2  [0.564]
+	->  class yes  [0.564]
 
 Rule 15/13: (4484.7/2290.2, lift 1.0)
-	contact = 1
-	->  class 2  [0.489]
+	contact = cellular
+	->  class yes  [0.489]
 
-Default class: 1
+Default class: no
 
 -----  Trial 16:  -----
 
 Rules:
 
 Rule 16/1: (73.8/20.7, lift 1.4)
-	contact = 2
+	contact = telephone
 	nr.employed <= 0.1058601
-	->  class 1  [0.713]
+	->  class no  [0.713]
 
 Rule 16/2: (5469.8/2633.9, lift 1.0)
 	nr.employed > 0.1058601
-	->  class 1  [0.518]
+	->  class no  [0.518]
 
 Rule 16/3: (299.7/111, lift 1.3)
 	custAge > 0.1302141
 	custAge <= 0.2737013
-	housing in {1, 3}
-	loan = 1
-	contact = 2
-	poutcome = 2
+	housing in {no, yes}
+	loan = no
+	contact = telephone
+	poutcome = nonexistent
 	cons.conf.idx <= 0.41841
 	nr.employed > 0.1058601
-	->  class 2  [0.629]
+	->  class yes  [0.629]
 
 Rule 16/4: (2930.2/1426.4, lift 1.1)
-	contact = 1
+	contact = cellular
 	campaign <= 0.1282051
 	euribor3m <= 0.2221718
-	->  class 2  [0.513]
+	->  class yes  [0.513]
 
-Default class: 1
+Default class: no
 
 -----  Trial 17:  -----
 
@@ -1108,470 +1108,470 @@ Rules:
 Rule 17/1: (124.6/48.2, lift 1.2)
 	campaign > 0.1025641
 	nr.employed <= 0.8597354
-	->  class 1  [0.611]
+	->  class no  [0.611]
 
 Rule 17/2: (1602.3/715.6, lift 1.1)
-	month = 3
-	day_of_week in {2, 3, 4, 5}
+	month = jun
+	day_of_week in {mon, thu, tue, wed}
 	nr.employed > 0.8597354
-	->  class 1  [0.553]
+	->  class no  [0.553]
 
 Rule 17/3: (35.2/11, lift 1.4)
-	month = 2
+	month = dec
 	nr.employed > 0.8597354
-	->  class 2  [0.676]
+	->  class yes  [0.676]
 
 Rule 17/4: (1114.6/521.7, lift 1.1)
-	month = 3
-	day_of_week = 1
+	month = jun
+	day_of_week = fri
 	campaign <= 0.2564103
-	->  class 2  [0.532]
+	->  class yes  [0.532]
 
 Rule 17/5: (3702.4/1795.5, lift 1.0)
 	campaign <= 0.1025641
 	nr.employed <= 0.8597354
-	->  class 2  [0.515]
+	->  class yes  [0.515]
 
-Default class: 1
+Default class: no
 
 -----  Trial 18:  -----
 
 Rules:
 
 Rule 18/1: (793.7/365.5, lift 1.0)
-	poutcome = 1
-	->  class 1  [0.539]
+	poutcome = failure
+	->  class no  [0.539]
 
 Rule 18/2: (5541/2658.6, lift 1.0)
 	euribor3m > 0.01995013
-	->  class 1  [0.520]
+	->  class no  [0.520]
 
 Rule 18/3: (50.5/15.8, lift 1.4)
-	schooling = 3
-	day_of_week = 5
-	poutcome = 2
-	->  class 2  [0.680]
+	schooling = unknown
+	day_of_week = wed
+	poutcome = nonexistent
+	->  class yes  [0.680]
 
 Rule 18/4: (182/64.2, lift 1.3)
-	poutcome = 2
+	poutcome = nonexistent
 	euribor3m <= 0.01995013
-	->  class 2  [0.646]
+	->  class yes  [0.646]
 
 Rule 18/5: (126.2/47.4, lift 1.3)
-	day_of_week = 4
+	day_of_week = tue
 	campaign > 0.05128205
-	poutcome = 2
-	->  class 2  [0.623]
+	poutcome = nonexistent
+	->  class yes  [0.623]
 
 Rule 18/6: (481.2/203.1, lift 1.2)
 	custAge > 0.1721143
-	marital = 2
-	schooling in {1, 2}
-	month in {1, 3}
-	day_of_week = 2
-	poutcome = 2
+	marital = married
+	schooling in {high.school, university.degree}
+	month in {apr, jun}
+	day_of_week = mon
+	poutcome = nonexistent
 	cons.price.idx <= 0.7848792
-	->  class 2  [0.578]
+	->  class yes  [0.578]
 
 Rule 18/7: (401.5/171.6, lift 1.2)
 	custAge <= 0.2102247
-	day_of_week = 3
-	poutcome = 2
+	day_of_week = thu
+	poutcome = nonexistent
 	euribor3m <= 0.9820902
-	->  class 2  [0.572]
+	->  class yes  [0.572]
 
 Rule 18/8: (435.5/203.9, lift 1.1)
-	poutcome = 3
-	->  class 2  [0.532]
+	poutcome = success
+	->  class yes  [0.532]
 
-Default class: 1
+Default class: no
 
 -----  Trial 19:  -----
 
 Rules:
 
 Rule 19/1: (91.5/33.6, lift 1.2)
-	loan = 2
-	month = 2
-	->  class 1  [0.630]
+	loan = yes
+	month = dec
+	->  class no  [0.630]
 
 Rule 19/2: (178.5/68, lift 1.2)
-	profession = 2
-	month = 3
-	day_of_week in {1, 4}
+	profession = blue-collar
+	month = jun
+	day_of_week in {fri, tue}
 	euribor3m > 0.9811834
-	->  class 1  [0.618]
+	->  class no  [0.618]
 
 Rule 19/3: (223/85.2, lift 1.2)
 	custAge > 0.1074934
-	profession = 1
-	schooling = 1
-	month = 3
-	day_of_week in {1, 4}
-	->  class 1  [0.617]
+	profession = admin.
+	schooling = high.school
+	month = jun
+	day_of_week in {fri, tue}
+	->  class no  [0.617]
 
 Rule 19/4: (690.4/301, lift 1.1)
 	custAge > 0.05263158
-	profession = 2
-	marital = 3
-	month = 3
-	->  class 1  [0.564]
+	profession = blue-collar
+	marital = single
+	month = jun
+	->  class no  [0.564]
 
 Rule 19/5: (2741.8/1225.4, lift 1.1)
-	month = 3
-	day_of_week in {2, 3, 5}
-	->  class 1  [0.553]
+	month = jun
+	day_of_week in {mon, thu, wed}
+	->  class no  [0.553]
 
 Rule 19/6: (3253.3/1503.7, lift 1.0)
 	euribor3m > 0.1718431
-	->  class 1  [0.538]
+	->  class no  [0.538]
 
 Rule 19/7: (33.4/5.5, lift 1.7)
 	custAge > 0.1704555
-	profession = 2
-	schooling = 1
-	month = 3
-	day_of_week in {2, 3, 5}
-	poutcome = 2
+	profession = blue-collar
+	schooling = high.school
+	month = jun
+	day_of_week in {mon, thu, wed}
+	poutcome = nonexistent
 	euribor3m <= 0.1054183
-	->  class 2  [0.816]
+	->  class yes  [0.816]
 
 Rule 19/8: (161.5/53.7, lift 1.4)
-	month = 1
+	month = apr
 	euribor3m <= 0.1718431
-	->  class 2  [0.665]
+	->  class yes  [0.665]
 
 Rule 19/9: (147.8/50.6, lift 1.4)
-	profession = 1
-	day_of_week in {2, 3, 5}
+	profession = admin.
+	day_of_week in {mon, thu, wed}
 	campaign <= 0.1538462
 	cons.conf.idx > 0.05439331
 	cons.conf.idx <= 0.4518828
 	euribor3m <= 0.1428248
 	pastEmail <= 0.1111111
-	->  class 2  [0.655]
+	->  class yes  [0.655]
 
 Rule 19/10: (411.9/172.3, lift 1.2)
 	custAge > 0.05263158
-	profession = 1
-	schooling in {2, 3}
-	month = 3
-	day_of_week in {1, 4}
+	profession = admin.
+	schooling in {university.degree, unknown}
+	month = jun
+	day_of_week in {fri, tue}
 	campaign <= 0.07692308
-	->  class 2  [0.581]
+	->  class yes  [0.581]
 
 Rule 19/11: (664.6/280.1, lift 1.2)
 	custAge > 0.05263158
-	profession = 2
-	marital in {1, 2}
-	schooling in {1, 2}
-	month = 3
-	day_of_week in {1, 4}
+	profession = blue-collar
+	marital in {divorced, married}
+	schooling in {high.school, university.degree}
+	month = jun
+	day_of_week in {fri, tue}
 	euribor3m <= 0.9811834
-	->  class 2  [0.578]
+	->  class yes  [0.578]
 
 Rule 19/12: (549.5/239.3, lift 1.2)
 	custAge > 0.1704555
 	custAge <= 0.381593
-	profession = 2
-	schooling = 1
-	default = 1
-	housing in {1, 3}
-	month = 3
-	day_of_week in {2, 3, 5}
+	profession = blue-collar
+	schooling = high.school
+	default = no
+	housing in {no, yes}
+	month = jun
+	day_of_week in {mon, thu, wed}
 	campaign <= 0.1538462
-	poutcome = 2
-	->  class 2  [0.564]
+	poutcome = nonexistent
+	->  class yes  [0.564]
 
 Rule 19/13: (560.5/252.3, lift 1.1)
-	loan = 1
-	month = 2
-	->  class 2  [0.550]
+	loan = no
+	month = dec
+	->  class yes  [0.550]
 
 Rule 19/14: (1096.4/517.3, lift 1.1)
 	custAge > 0.1704555
-	profession = 2
-	schooling = 1
-	default = 1
-	month = 3
+	profession = blue-collar
+	schooling = high.school
+	default = no
+	month = jun
 	campaign <= 0.1538462
-	poutcome = 2
-	->  class 2  [0.528]
+	poutcome = nonexistent
+	->  class yes  [0.528]
 
 Rule 19/15: (2362.6/1151.8, lift 1.1)
-	day_of_week in {1, 4}
-	->  class 2  [0.512]
+	day_of_week in {fri, tue}
+	->  class yes  [0.512]
 
-Default class: 1
+Default class: no
 
 -----  Trial 20:  -----
 
 Rules:
 
 Rule 20/1: (79.3/20, lift 1.4)
-	marital = 2
-	poutcome = 1
+	marital = married
+	poutcome = failure
 	emp.var.rate > -1.7
-	->  class 1  [0.742]
+	->  class no  [0.742]
 
 Rule 20/2: (1080/427.7, lift 1.1)
-	marital = 2
+	marital = married
 	campaign <= 0.05128205
 	emp.var.rate > -0.1
-	->  class 1  [0.604]
+	->  class no  [0.604]
 
 Rule 20/3: (5847.7/2742, lift 1.0)
 	custAge > 0.06182496
-	->  class 1  [0.531]
+	->  class no  [0.531]
 
 Rule 20/4: (84.3/25.5, lift 1.5)
 	custAge <= 0.06182496
-	->  class 2  [0.693]
+	->  class yes  [0.693]
 
 Rule 20/5: (144.6/53.6, lift 1.3)
-	marital = 3
-	default = 2
+	marital = single
+	default = unknown
 	emp.var.rate > -1.7
-	->  class 2  [0.627]
+	->  class yes  [0.627]
 
 Rule 20/6: (102.6/39.6, lift 1.3)
-	profession = 2
-	marital = 2
+	profession = blue-collar
+	marital = married
 	campaign > 0.1282051
 	euribor3m > 0.790297
-	->  class 2  [0.612]
+	->  class yes  [0.612]
 
 Rule 20/7: (1244.7/612.9, lift 1.1)
 	custAge > 0.3039196
-	profession = 2
-	->  class 2  [0.508]
+	profession = blue-collar
+	->  class yes  [0.508]
 
 Rule 20/8: (643.8/323.2, lift 1.1)
-	month = 2
-	->  class 2  [0.498]
+	month = dec
+	->  class yes  [0.498]
 
 Rule 20/9: (2284.2/1167.4, lift 1.0)
 	custAge > 0.3039196
-	->  class 2  [0.489]
+	->  class yes  [0.489]
 
-Default class: 1
+Default class: no
 
 -----  Trial 21:  -----
 
 Rules:
 
 Rule 21/1: (5290.3/2476.1, lift 1.0)
-	month in {2, 3}
-	->  class 1  [0.532]
+	month in {dec, jun}
+	->  class no  [0.532]
 
 Rule 21/2: (38.7/7.2, lift 1.7)
-	day_of_week = 1
+	day_of_week = fri
 	emp.var.rate <= -1.7
 	euribor3m > 0.1856722
-	->  class 2  [0.798]
+	->  class yes  [0.798]
 
 Rule 21/3: (39.9/11.5, lift 1.5)
-	schooling = 3
-	day_of_week = 5
+	schooling = unknown
+	day_of_week = wed
 	emp.var.rate > -1.7
-	->  class 2  [0.701]
+	->  class yes  [0.701]
 
 Rule 21/4: (61.2/18.4, lift 1.5)
-	day_of_week = 1
+	day_of_week = fri
 	campaign <= 0.1025641
 	previous > 0.1666667
 	emp.var.rate <= -1.7
-	->  class 2  [0.694]
+	->  class yes  [0.694]
 
 Rule 21/5: (67.9/22.7, lift 1.4)
-	day_of_week = 1
+	day_of_week = fri
 	previous <= 0.1666667
 	cons.price.idx <= 0.06936867
-	->  class 2  [0.661]
+	->  class yes  [0.661]
 
 Rule 21/6: (82.3/28.3, lift 1.4)
-	day_of_week = 1
+	day_of_week = fri
 	campaign <= 0.1025641
 	emp.var.rate <= -1.7
 	pastEmail > 0.1111111
-	->  class 2  [0.653]
+	->  class yes  [0.653]
 
 Rule 21/7: (97.4/35.4, lift 1.3)
-	day_of_week = 4
+	day_of_week = tue
 	euribor3m > 0.9818635
-	->  class 2  [0.634]
+	->  class yes  [0.634]
 
 Rule 21/8: (132.5/52, lift 1.3)
-	day_of_week = 3
+	day_of_week = thu
 	campaign > 0.02564103
 	campaign <= 0.1025641
 	emp.var.rate <= -1.7
-	->  class 2  [0.606]
+	->  class yes  [0.606]
 
 Rule 21/9: (572.9/259.5, lift 1.1)
-	day_of_week = 2
+	day_of_week = mon
 	campaign <= 0.1025641
 	emp.var.rate <= -1.7
 	cons.price.idx > 0.2501948
-	->  class 2  [0.547]
+	->  class yes  [0.547]
 
 Rule 21/10: (417.5/190.1, lift 1.1)
-	default = 1
-	contact = 1
-	day_of_week = 4
+	default = no
+	contact = cellular
+	day_of_week = tue
 	emp.var.rate <= -1.7
 	pastEmail <= 0.1666667
-	->  class 2  [0.544]
+	->  class yes  [0.544]
 
 Rule 21/11: (2986.6/1460, lift 1.1)
 	emp.var.rate <= -1.7
-	->  class 2  [0.511]
+	->  class yes  [0.511]
 
-Default class: 1
+Default class: no
 
 -----  Trial 22:  -----
 
 Rules:
 
 Rule 22/1: (38.8/6.6, lift 1.6)
-	day_of_week = 3
+	day_of_week = thu
 	euribor3m > 0.9820902
-	->  class 1  [0.815]
+	->  class no  [0.815]
 
 Rule 22/2: (25.5/5, lift 1.5)
-	day_of_week = 2
+	day_of_week = mon
 	pdays > 15
 	previous > 0.1666667
-	->  class 1  [0.782]
+	->  class no  [0.782]
 
 Rule 22/3: (36.7/8.1, lift 1.5)
-	profession = 3
-	month in {2, 3}
-	day_of_week = 5
+	profession = retired
+	month in {dec, jun}
+	day_of_week = wed
 	pdays > 15
-	->  class 1  [0.765]
+	->  class no  [0.765]
 
 Rule 22/4: (31.8/8.7, lift 1.4)
 	campaign > 0.05128205
 	pdays <= 15
-	->  class 1  [0.714]
+	->  class no  [0.714]
 
 Rule 22/5: (118.4/36.9, lift 1.3)
 	custAge <= 0.140636
-	day_of_week = 3
+	day_of_week = thu
 	pdays > 15
-	->  class 1  [0.685]
+	->  class no  [0.685]
 
 Rule 22/6: (104.5/36.3, lift 1.2)
-	month = 1
-	day_of_week = 1
+	month = apr
+	day_of_week = fri
 	pdays > 15
 	previous <= 0.1666667
-	->  class 1  [0.650]
+	->  class no  [0.650]
 
 Rule 22/7: (193.7/68.9, lift 1.2)
-	contact = 2
-	month in {2, 3}
-	day_of_week = 5
-	->  class 1  [0.643]
+	contact = telephone
+	month in {dec, jun}
+	day_of_week = wed
+	->  class no  [0.643]
 
 Rule 22/8: (583.5/241, lift 1.1)
-	housing in {1, 2}
-	day_of_week = 2
+	housing in {no, unknown}
+	day_of_week = mon
 	pdays > 15
-	->  class 1  [0.587]
+	->  class no  [0.587]
 
 Rule 22/9: (883.1/368, lift 1.1)
-	day_of_week = 4
+	day_of_week = tue
 	pdays > 15
 	cons.conf.idx > 0.0334728
-	->  class 1  [0.583]
+	->  class no  [0.583]
 
 Rule 22/10: (548.5/228.9, lift 1.1)
-	marital = 2
-	day_of_week = 3
+	marital = married
+	day_of_week = thu
 	pdays > 15
-	->  class 1  [0.582]
+	->  class no  [0.582]
 
 Rule 22/11: (1073.2/474.1, lift 1.1)
 	custAge > 0.07894737
-	day_of_week = 2
+	day_of_week = mon
 	previous <= 0
-	->  class 1  [0.558]
+	->  class no  [0.558]
 
 Rule 22/12: (37.7/4.5, lift 1.8)
 	custAge > 0.140636
-	schooling in {1, 2}
-	day_of_week = 3
+	schooling in {high.school, university.degree}
+	day_of_week = thu
 	pdays > 15
 	euribor3m <= 0.02335071
 	pastEmail <= 0.05555556
-	->  class 2  [0.861]
+	->  class yes  [0.861]
 
 Rule 22/13: (30/6, lift 1.6)
 	custAge <= 0.07894737
-	housing = 3
-	day_of_week = 2
+	housing = yes
+	day_of_week = mon
 	previous <= 0
-	->  class 2  [0.780]
+	->  class yes  [0.780]
 
 Rule 22/14: (27.3/6.8, lift 1.5)
-	day_of_week = 1
+	day_of_week = fri
 	pdays > 15
 	previous > 0.1666667
-	->  class 2  [0.734]
+	->  class yes  [0.734]
 
 Rule 22/15: (52.2/14.1, lift 1.5)
-	day_of_week = 4
+	day_of_week = tue
 	cons.conf.idx <= 0.0334728
-	->  class 2  [0.720]
+	->  class yes  [0.720]
 
 Rule 22/16: (95.9/32.8, lift 1.4)
-	housing = 3
-	day_of_week = 2
+	housing = yes
+	day_of_week = mon
 	pdays > 15
 	previous > 0
 	previous <= 0.1666667
-	->  class 2  [0.654]
+	->  class yes  [0.654]
 
 Rule 22/17: (100.4/35.7, lift 1.3)
-	month = 1
-	day_of_week = 5
-	->  class 2  [0.641]
+	month = apr
+	day_of_week = wed
+	->  class yes  [0.641]
 
 Rule 22/18: (89.3/34.8, lift 1.3)
-	housing = 3
-	loan = 2
-	day_of_week = 2
+	housing = yes
+	loan = yes
+	day_of_week = mon
 	previous <= 0
 	cons.price.idx > 0.2696804
-	->  class 2  [0.608]
+	->  class yes  [0.608]
 
 Rule 22/19: (473.3/197.3, lift 1.2)
 	custAge > 0.140636
-	marital in {1, 3}
-	day_of_week = 3
+	marital in {divorced, single}
+	day_of_week = thu
 	euribor3m <= 0.9820902
-	->  class 2  [0.583]
+	->  class yes  [0.583]
 
 Rule 22/20: (446.7/190.5, lift 1.2)
 	campaign <= 0.05128205
 	pdays <= 15
-	->  class 2  [0.573]
+	->  class yes  [0.573]
 
 Rule 22/21: (680.6/313.7, lift 1.1)
-	profession in {1, 2, 4}
-	housing in {1, 3}
-	contact = 1
-	day_of_week = 5
-	->  class 2  [0.539]
+	profession in {admin., blue-collar, student}
+	housing in {no, yes}
+	contact = cellular
+	day_of_week = wed
+	->  class yes  [0.539]
 
 Rule 22/22: (1269.4/609.1, lift 1.1)
-	month in {2, 3}
-	day_of_week = 1
-	->  class 2  [0.520]
+	month in {dec, jun}
+	day_of_week = fri
+	->  class yes  [0.520]
 
-Default class: 1
+Default class: no
 
 -----  Trial 23:  -----
 
@@ -1579,50 +1579,50 @@ Rules:
 
 Rule 23/1: (4453.4/1979.6, lift 1.0)
 	nr.employed > 0.4257089
-	->  class 1  [0.555]
+	->  class no  [0.555]
 
 Rule 23/2: (48.6/14.4, lift 1.5)
-	marital in {2, 3}
-	month = 1
+	marital in {married, single}
+	month = apr
 	nr.employed > 0.4257089
 	pastEmail > 0.1111111
-	->  class 2  [0.695]
+	->  class yes  [0.695]
 
 Rule 23/3: (106/36, lift 1.4)
-	marital in {2, 3}
-	month = 1
+	marital in {married, single}
+	month = apr
 	euribor3m <= 0.1718431
 	nr.employed > 0.4257089
-	->  class 2  [0.657]
+	->  class yes  [0.657]
 
 Rule 23/4: (1478.6/718.8, lift 1.1)
 	nr.employed <= 0.4257089
-	->  class 2  [0.514]
+	->  class yes  [0.514]
 
-Default class: 1
+Default class: no
 
 -----  Trial 24:  -----
 
 Rules:
 
 Rule 24/1: (799.6/338.8, lift 1.1)
-	poutcome = 1
-	->  class 1  [0.576]
+	poutcome = failure
+	->  class no  [0.576]
 
 Rule 24/2: (4634.9/2131.6, lift 1.0)
-	month = 3
-	->  class 1  [0.540]
+	month = jun
+	->  class no  [0.540]
 
 Rule 24/3: (498.9/244.6, lift 1.1)
-	month = 1
-	poutcome = 2
-	->  class 2  [0.510]
+	month = apr
+	poutcome = nonexistent
+	->  class yes  [0.510]
 
 Rule 24/4: (419.9/208, lift 1.1)
-	poutcome = 3
-	->  class 2  [0.505]
+	poutcome = success
+	->  class yes  [0.505]
 
-Default class: 1
+Default class: no
 
 -----  Trial 25:  -----
 
@@ -1630,133 +1630,133 @@ Rules:
 
 Rule 25/1: (58.5/8.7, lift 1.6)
 	custAge <= 0.1704555
-	marital = 2
-	schooling = 1
-	housing = 1
-	month = 3
-	poutcome = 2
-	->  class 1  [0.840]
+	marital = married
+	schooling = high.school
+	housing = no
+	month = jun
+	poutcome = nonexistent
+	->  class no  [0.840]
 
 Rule 25/2: (22/2.8, lift 1.6)
-	poutcome = 3
+	poutcome = success
 	cons.conf.idx <= 0.0334728
-	->  class 1  [0.840]
+	->  class no  [0.840]
 
 Rule 25/3: (284.5/101.5, lift 1.2)
-	profession in {1, 4}
-	marital = 2
-	schooling = 1
-	default = 1
-	poutcome = 2
-	->  class 1  [0.642]
+	profession in {admin., student}
+	marital = married
+	schooling = high.school
+	default = no
+	poutcome = nonexistent
+	->  class no  [0.642]
 
 Rule 25/4: (154.1/56.1, lift 1.2)
 	custAge <= 0.2124007
-	marital = 2
-	schooling = 2
-	poutcome = 2
-	->  class 1  [0.635]
+	marital = married
+	schooling = university.degree
+	poutcome = nonexistent
+	->  class no  [0.635]
 
 Rule 25/5: (132.2/48.3, lift 1.2)
-	profession in {2, 3}
-	marital = 2
-	schooling = 1
-	month = 1
-	poutcome = 2
-	->  class 1  [0.633]
+	profession in {blue-collar, retired}
+	marital = married
+	schooling = high.school
+	month = apr
+	poutcome = nonexistent
+	->  class no  [0.633]
 
 Rule 25/6: (190.6/71.6, lift 1.2)
 	custAge > 0.2480397
-	marital = 3
-	contact = 1
-	poutcome = 2
-	->  class 1  [0.623]
+	marital = single
+	contact = cellular
+	poutcome = nonexistent
+	->  class no  [0.623]
 
 Rule 25/7: (737.7/312.3, lift 1.1)
-	marital = 2
-	schooling = 1
-	default = 1
-	housing = 3
-	month = 3
+	marital = married
+	schooling = high.school
+	default = no
+	housing = yes
+	month = jun
 	campaign <= 0.1538462
-	->  class 1  [0.576]
+	->  class no  [0.576]
 
 Rule 25/8: (550.5/235.9, lift 1.1)
-	marital = 2
-	default = 2
-	->  class 1  [0.571]
+	marital = married
+	default = unknown
+	->  class no  [0.571]
 
 Rule 25/9: (795.9/350.2, lift 1.1)
-	poutcome = 1
-	->  class 1  [0.560]
+	poutcome = failure
+	->  class no  [0.560]
 
 Rule 25/10: (1479.6/681, lift 1.0)
-	contact = 2
-	->  class 1  [0.540]
+	contact = telephone
+	->  class no  [0.540]
 
 Rule 25/11: (50.5/12.7, lift 1.6)
-	profession in {2, 3}
-	marital = 2
-	default = 1
-	housing = 3
-	month = 3
+	profession in {blue-collar, retired}
+	marital = married
+	default = no
+	housing = yes
+	month = jun
 	campaign > 0.1538462
-	->  class 2  [0.739]
+	->  class yes  [0.739]
 
 Rule 25/12: (45.9/14.5, lift 1.4)
-	default = 1
+	default = no
 	campaign <= 0.05128205
 	pdays <= 16
-	poutcome = 1
-	->  class 2  [0.677]
+	poutcome = failure
+	->  class yes  [0.677]
 
 Rule 25/13: (444.7/191.2, lift 1.2)
 	custAge > 0.2124007
-	marital = 2
-	schooling = 2
-	default = 1
-	month in {1, 3}
-	poutcome = 2
-	->  class 2  [0.570]
+	marital = married
+	schooling = university.degree
+	default = no
+	month in {apr, jun}
+	poutcome = nonexistent
+	->  class yes  [0.570]
 
 Rule 25/14: (444.9/191.8, lift 1.2)
 	custAge > 0.1704555
-	profession in {2, 3}
-	marital = 2
-	schooling = 1
-	default = 1
-	housing = 1
-	month = 3
-	poutcome = 2
-	->  class 2  [0.569]
+	profession in {blue-collar, retired}
+	marital = married
+	schooling = high.school
+	default = no
+	housing = no
+	month = jun
+	poutcome = nonexistent
+	->  class yes  [0.569]
 
 Rule 25/15: (202.1/91.1, lift 1.2)
-	schooling = 1
-	month = 2
-	poutcome = 2
-	->  class 2  [0.549]
+	schooling = high.school
+	month = dec
+	poutcome = nonexistent
+	->  class yes  [0.549]
 
 Rule 25/16: (404.4/187.7, lift 1.1)
-	poutcome = 3
+	poutcome = success
 	cons.conf.idx > 0.0334728
-	->  class 2  [0.536]
+	->  class yes  [0.536]
 
 Rule 25/17: (426.3/206.8, lift 1.1)
-	poutcome = 3
-	->  class 2  [0.515]
+	poutcome = success
+	->  class yes  [0.515]
 
 Rule 25/18: (1524.8/761.5, lift 1.1)
-	marital = 3
-	poutcome = 2
-	->  class 2  [0.501]
+	marital = single
+	poutcome = nonexistent
+	->  class yes  [0.501]
 
-Default class: 1
+Default class: no
 
 -----  Trial 26:  -----
 
 Rules:
 
-Default class: 1
+Default class: no
 
 *** boosting reduced to 26 trials since last classifier is very inaccurate
 
@@ -1798,8 +1798,8 @@ boost	        516( 8.7%)   <<
 
 	   (a)   (b)    <-classified as
 	  ----  ----
-	  5193    67    (a): class 1
-	   449   223    (b): class 2
+	  5193    67    (a): class no
+	   449   223    (b): class yes
 
 
 	Attribute usage:
