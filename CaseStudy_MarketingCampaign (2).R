@@ -88,8 +88,10 @@ C50_Predictions = predict(C50_model, test[,-22], type = "class")
 ConfMatrix_C50 = table(test$responded, C50_Predictions)
 confusionMatrix(ConfMatrix_C50)
 
+write(capture.output(confusionMatrix(ConfMatrix_C50)), "ModelErrorMetrics.txt")
+
 #False Negative rate
-FNR = FN/FN+TP 
+#FNR = FN/FN+TP 
 
 #Accuracy: 90.89%
 #FNR: 63.09%
