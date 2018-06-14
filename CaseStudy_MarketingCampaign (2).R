@@ -82,7 +82,7 @@ summary(C50_model)
 write(capture.output(summary(C50_model)), "c50Rules.txt")
 
 #Lets predict for test cases
-C50_Predictions = predict(C50_model, test[,-17], type = "class")
+C50_Predictions = predict(C50_model, test[,-22], type = "class")
 
 ##Evaluate the performance of classification model
 ConfMatrix_C50 = table(test$responded, C50_Predictions)
